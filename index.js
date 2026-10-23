@@ -6,23 +6,8 @@ IF number is equal to 0, assign to Rock.
 ELSE IF number is equal to 1, assign to Paper.
 ELSE number is equal to 2, assign to Scissors.
 PRINT the value of the function results to the console to see if it regenerates random numbers after every call.
-*/
-let computerScore = 0;
-let humanScore = 0;
 
-function getComputerChoice() {
-    let computerChoice = Math.floor(Math.random() * 3);
-
-    if (computerChoice === 0) {
-        return computerChoice = "Rock";
-    } else if (computerChoice === 1) {
-        return computerChoice = "Paper";
-    } else {
-        return computerChoice = "Scissors";
-    }
-}
-
-/* STEP 2:
+STEP 2:
 Create a Human's choice to enter a value between, Rock, Paper and Scissors.
 Create a FUNCTION called getHumanChoice with a parameter called Input.
 Create a VARIABLE called humanChoice.
@@ -30,16 +15,6 @@ Assign this VARIABLE to a prompt and DISPLAY the statement "Please Enter Rock, P
 IF input is not equal to Rock, Paper or Scissors, DISPLAY the message "Wrong Input".
 ELSE PRINT the value of the user's choice to the console.
 */
-
-function getHumanChoice() {
-    let humanChoice = prompt("Please Enter Rock, Paper or Scissors!");
-
-    if (!(humanChoice === "Rock" || humanChoice === "Paper" || humanChoice === "Scissors")) {
-        alert("Wrong Input xD"); 
-    } else {
-        return humanChoice;
-    }
-}
 
 /* STEP 3:
 Next we declare the player's score and create two VARIABLES and set them to 0 so we can count the score when anyone wins.
@@ -67,6 +42,66 @@ ELSE IF Computer choice is Scissors and Human choice is Paper, PRINT Computer wi
 Increase the ComputerScore by 1.
 */
 
-function playRound(humanChoice, ComputerChoice) {
-    
+
+/* Step 5
+NEXT, we create a FUNCTION that plays the game called playGame.
+Move your playRound function and score variables so that they’re declared inside of the new playGame function
+Play 5 rounds by calling playRound 5 times.
+*/
+
+function getComputerChoice() {
+    let computerChoice = Math.floor(Math.random() * 3);
+
+    if (computerChoice === 0) {
+        return computerChoice = "rock";
+    } else if (computerChoice === 1) {
+        return computerChoice = "paper";
+    } else {
+        return computerChoice = "scissors";
+    }
 }
+
+function getHumanChoice() {
+    let humanChoice = prompt("Please Enter Rock, Paper or Scissors!");
+        humanChoice = humanChoice.toLowerCase();
+
+    if (!(humanChoice === "rock" || humanChoice === "paper" || humanChoice === "scissors")) {
+        alert("Wrong Input xD"); 
+        getHumanChoice();
+    } else {
+        return humanChoice;
+    }
+}
+
+let computerScore = 0;
+let humanScore = 0;
+
+function playRound(humanChoice, computerChoice) {
+    if (humanChoice === "rock" && computerChoice === "scissors") {
+        console.log("You Win! Rock beats Scissors");
+        humanScore++;
+    } else if (computerChoice === "rock" && humanChoice === "scissors") {
+        console.log("Computer Win! Rock beats Scissors");
+        computerScore++
+    } else if (humanChoice === "paper" && computerChoice === "rock") {
+        console.log("You Win! Paper beats Rock");
+        humanScore++;
+    } else if (computerChoice === "paper" && humanChoice === "rock") {
+        console.log("Computer Win! Paper beats Rock");
+        computerScore++
+    } else if (humanChoice === "scissors" && computerChoice === "paper") {
+        console.log("You Win! Scissors beats Paper");
+        humanScore++;
+    } else if (computerChoice === "scissors" && humanChoice === "paper") {
+        console.log("Computer Win! Scissors beats Paper");
+        computerScore++
+    } else {
+        console.log("It's a Tie, Keep Going!");
+    }
+}
+    const humanSelection = getHumanChoice();
+    const computerSelection = getComputerChoice();
+
+    playRound(humanSelection, computerSelection);
+    console.log(`Your Score: ${humanScore}`);
+    console.log(`Computer Score: ${computerScore}`);
