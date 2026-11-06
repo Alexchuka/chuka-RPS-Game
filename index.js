@@ -14,17 +14,17 @@ function getComputerChoice() {
 // Function to get the User's Choice
 function getHumanChoice() {
   let humanChoice = prompt("Please Enter Rock, Paper or Scissors!");
+
+  if (humanChoice === null) {
+    alert("You need to enter a value to finish the game");
+    return getHumanChoice();
+  }
+    
   humanChoice = humanChoice.toLowerCase();
 
-  if (
-    !(
-      humanChoice === "rock" ||
-      humanChoice === "paper" ||
-      humanChoice === "scissors"
-    )
-  ) {
+  if (!(humanChoice === "rock" || humanChoice === "paper" || humanChoice === "scissors")) {
     alert("Wrong Input.");
-    getHumanChoice();
+    return getHumanChoice();
   } else {
     return humanChoice;
   }
