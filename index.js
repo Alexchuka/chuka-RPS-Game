@@ -61,6 +61,7 @@ function playGame() {
   }
 
   for (let round = 1; round <= 5; round++) {
+    alert(`Round: ${round}`);
     console.log(`------- Round: ${round} -------`);
     const humanSelection = getHumanChoice();
     const computerSelection = getComputerChoice();
