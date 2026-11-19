@@ -16,9 +16,9 @@ Rules:
 
 
 Pseudocodes
-	1. Create a new Git Repository with the name: chuka-RPS-Game. 
-	2. Create a blank HTML Document called: index.html. 
-	3. Create a blank JS Document called: index.js. 
+	1. Create a new Git Repository with the name: chuka-RPS-Game.  
+	2. Create a blank HTML Document called: index.html.  
+	3. Create a blank JS Document called: index.js.  
 	4. Link the JS Document to the HTML document using the <script> Tag. 
 	5. In the JS document, Create a FUNCTION to get the computer's chioce between, Rock, Paper and Scissors, we'll call this function getComputerChoice. 
 	6. Create a VARIABLE called computerChoice to choose any random value between Rock, Paper and Scissors. We'll use the Math.random method. 
