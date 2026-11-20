@@ -44,3 +44,8 @@ button {
 #reset:hover {
     background: rgb(196, 2, 2);
 }
+
+#roundResult {
+    white-space: pre-line;
+    margin: 10px;
+}
