@@ -48,7 +48,7 @@ function playRound(humanChoice, computerChoice) {
 }
 
 function updateDisplay(humanChoice, computerChoice, message) {
-  roundResult.textContent = `You Chose ${humanChoice}, Computer Chose ${computerChoice}. ${message}`;
+  roundResult.textContent = `You chose ${humanChoice}, Computer chose ${computerChoice}. ${message}`;
   score.textContent = `You: ${humanScore} | Computer: ${computerScore}`;
 }
 
