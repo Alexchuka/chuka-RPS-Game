@@ -14,17 +14,33 @@ button {
 }
 
 #rock {
-    background: rgb(2, 104, 2);
+    background: rgb(1, 168, 1);
+}
+
+#rock:hover {
+    background: rgb(1, 96, 1);
 }
 
 #scissors {
-    background: rgb(184, 120, 3);
+    background: rgb(160, 1, 200);
+}
+
+#scissors:hover {
+    background: rgb(130, 1, 156);
 }
 
 #paper {
-    background: rgb(32, 0, 128);
+    background: rgb(16, 75, 249);
+}
+
+#paper:hover {
+    background: rgb(7, 2, 174);
 }
 
 #reset {
+    background: rgb(250, 16, 16);
+}
+
+#reset:hover {
     background: rgb(196, 2, 2);
 }
